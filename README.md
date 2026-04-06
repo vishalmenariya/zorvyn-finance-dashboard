@@ -1,17 +1,37 @@
-# React + Vite
+# Zorvyn Finance Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A clean, responsive, and interactive finance dashboard built to demonstrate frontend development skills, UI design, and state management.
 
-Currently, two official plugins are available:
+## 🚀 Live Demo
+*(Optional: Add your deployment link here if you have one)*
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🛠️ Tech Stack
+* **Framework:** React + Vite
+* **State Management:** Core Redux
+* **Styling:** Plain CSS
+* **Data Visualization:** Pure CSS & React DOM rendering (No external chart libraries)
 
-## React Compiler
+## ✨ Core Features
+1. **Role-Based Access Control (RBAC):** Toggle between "Viewer" (read-only) and "Admin" (can add/delete transactions).
+2. **Dynamic Financial Summary:** Real-time calculation of Total Balance, Income, and Expenses.
+3. **Custom "Zero-Library" Data Visualizations:** Categorical spending breakdown built entirely from scratch using HTML `div` elements and inline CSS.
+4. **Interactive Transactions Table:** Complete list with real-time search/filtering and empty state handling.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ⚙️ Setup & Installation
 
-## Expanding the ESLint configuration
+1. Clone the repository:
+    git clone https://github.com/vishalmenariya/zorvyn-finance-dashboard.git
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# zorvyn-finance-dashboard
+2. Navigate to the directory:
+    cd zorvyn-finance-dashboard
+
+3. Install dependencies:
+    npm install
+
+4. Start the development server:
+    npm run dev
+
+## 🏗️ Architecture & Approach
+* **State Management:** Core Redux was chosen to manage the global state (`transactions` and `role`). This ensures synchronous updates across charts, tables, and summaries without prop-drilling.
+* **Component Modularity:** The UI is broken down into logical, reusable components (`SummaryCards`, `TransactionTable`, `CssBarChart`) to maintain clean, scalable code.
+* **Responsive Design:** Built with CSS Grid and Flexbox to ensure the dashboard remains highly readable and functional across desktop, tablet, and mobile screens.
